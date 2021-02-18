@@ -2,15 +2,14 @@
 #https://github.com/thestinger/termite/blob/master/config
 allow_bold = true
 audible_bell = false
-browser = xdg-open
+browser = brave
 clickable_url = true
 cursor_blink = system
-cursor_shape = block
+cursor_shape = underline
 dynamic_title = true
 filter_unmatched_urls = true
-#font = Moonospace 11
+#font = Monospace 11
 font = Source Code Pro 11
-#font = Hack Bold 10
 geometry = 900x650
 highlight = #2f2f2f
 icon_name = terminal
@@ -19,7 +18,7 @@ mouse_autohide = false
 scroll_on_output = false
 scroll_on_keystroke = true
 scrollback_lines = 15000
-size_hints = false
+size_hints = true
 search_wrap = true
 urgent_on_bell = true
 
@@ -47,13 +46,13 @@ urgent_on_bell = true
 
 [colors]
 # ArcoLinux Default Theme
-background = rgba(40, 42, 54, 0.8)
+#background = #1f1c1e
 
 # special
-foreground      = #f8f8f2
-foreground_bold = #f8f8f2
+foreground      = #d5c4a1
+background		= #1f1c1e
 cursor          = #f8f8f2
-background		= #282a36
+background		= #171616
 
 # black
 color0  = #000000
@@ -73,7 +72,7 @@ color11 = #f4f99d
 
 # blue
 color4  = #6790EB
-color12 = #79A9FF
+color12 = #70A9FF
 
 # magenta
 color5  = #ff79c6
