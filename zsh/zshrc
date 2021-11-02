@@ -98,8 +98,6 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias copy="xclip -selection clipboard"
-#alias ac2connect="ssh raymond@ue1ac201.blackbot.net -p 51029"
-alias ac2connect="ssh raymond@3.226.77.3 -p 51029"
 
 export TERM=xterm-256color
 source ~/.oh-my-zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
