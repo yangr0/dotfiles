@@ -7,14 +7,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'morhetz/gruvbox'
 Plug 'ycm-core/youcompleteme'
 
-let g:ale_linters = {'rust': ['rustc', 'rls']}
-let g:rustc_path = '~/.cargo/bin/rustc'
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_italic = 1
-let g:gruvbox_improved_warnings = 1
-let g:lightline = {'colorscheme': 'one'}
-
-filetype plugin indent on
 set number 
 set hlsearch
 set background=dark
@@ -27,6 +19,17 @@ set expandtab
 set noswapfile
 set autoindent
 set smartindent
+
+let g:ale_linters = {'rust': ['rustc', 'rls']}
+let g:rustc_path = '~/.cargo/bin/rustc'
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_italic = 1
+let g:gruvbox_improved_strings = 1
+let g:gruvbox_improved_warnings = 1
+let g:lightline = {'colorscheme': 'one'}
+
+filetype plugin indent on
 syntax enable
 
 call plug#end()
