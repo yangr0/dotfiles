@@ -48,11 +48,11 @@ super + F10
 
 #Rofi Fullscreen
 super + F11
-    rofi -show run -fullscreen
+    rofi -theme-str 'window \{width: 100%;height: 100%;\}' -show drun
 
 #Rofi
 super + F12
-    rofi -show run
+    rofi -show drun
 
 #################################################################
 # SUPER + ... KEYS
@@ -60,15 +60,15 @@ super + F12
 
 #Atom
 super + e
-    code
+    atom
 
 #Browser
 super + w
-    brave
+    vivaldi-stable
 
 #Conky-toggle
 super + c
-    discord
+    conky-toggle
 
 #Htop
 super + h
@@ -94,18 +94,18 @@ super + v
 super + m
     pragha
 
-#Alacritty
+#urxvt
 super + Return
-    alacritty
+    urxvt
 
 #Xkill
 super + Escape
     xkill
 
 #Keyboard dependent
-#Alacritty
+#urxvt
 super + KP_Enter
-	alacritty
+	urxvt
 
 #################################################################
 # SUPER + SHIFT KEYS
@@ -165,10 +165,6 @@ ctrl + alt + c
 ctrl + alt + g
     chromium -no-default-browser-check
 
-#Evolution
-ctrl + alt + e
-     evolution
-
 #Firefox
 ctrl + alt + f
      firefox
@@ -205,13 +201,13 @@ ctrl + alt + r
 ctrl + alt + s
    spotify
 
-#Termite
+#urxvt
 ctrl + alt + Return
-    alacritty
+    urxvt
 
-#termite
+#urxvt
 ctrl + alt + t
-    alacritty
+    urxvt
 
 #Vivaldi
 ctrl + alt + v
@@ -223,9 +219,9 @@ ctrl + alt + a
 
 
 #Keyboard dependent
-#termite
+#urxvt
 #ctrl + alt + KP_Enter
-#     termite
+#     urxvt
 
 
 #################################################################
@@ -264,13 +260,17 @@ alt + Up
 alt + Down
     variety --resume
 
-#Gmrun
+#Xfce appfinder
 alt + F2
-    gmrun
+    xfce4-appfinder --collapsed
 
 #Xfce4-appfinder
 alt + F3
     xfce4-appfinder
+
+#Xlunch app launcher
+#alt + F5
+#    xlunch --config ~/.config/xlunch/default.conf --input ~/.config/xlunch/entries.dsv   
 
 
 #################################################################
@@ -469,8 +469,8 @@ super + shift + q
 	bspc node -c
 
 #Logout
-super + shift + x
-	bspc quit
+#super + shift + x
+#	bspc quit
 
 # Focus/swap windows by direction
 super + {_,shift + }{h,j,k,l}
@@ -501,7 +501,7 @@ super + shift + Down
 #################################################################
 
 # Focus/swap windows by direction
-super + alt + {h,j,k,l}
+super + ctrl + {Left,Down,Up,Right}
 	bspc node --{focus} {west,south,north,east}
 
 # Contract tiled space
@@ -536,10 +536,6 @@ alt + shift + Tab
 #Rotate desktop
 alt + space
 	bspc node @/ --rotate {90,-90}
-
-#Deepin Screeenshot
-alt + s
-    deepin-screenshot
 
 #################################################################
 # ALT + SHIFT KEYS
@@ -577,12 +573,12 @@ ctrl + alt + Down
 
 #Switch here between qwerty and azerty or make new one
 #Focus selected desktop FOR QWERTY KEYBOARDS
-super + {1-9,0}
-	bspc desktop -f '^{1-9,10}'
+#super + {1-9,0}
+#	bspc desktop -f '^{1-9,10}'1323&
 
 #Focus selected desktop	FOR BELIGIAN AZERTY KEYBOARDS
-#super + {ampersand,eacute,quotedbl,apostrophe,parenleft,section,egrave,exclam,ccedilla,agrave}
-#    bspc desktop -f '^{1-9,10}'
+super + {ampersand,eacute,quotedbl,apostrophe,parenleft,section,egrave,exclam,ccedilla,agrave}
+    bspc desktop -f '^{1-9,10}'
 
 #Focus selected desktop	FOR FRNECH AZERTY KEYBOARDS
 #super + {ampersand,eacute,quotedbl,apostrophe,parenleft,minus,egrave,underscore,ccedilla,agrave}
@@ -592,11 +588,18 @@ super + {1-9,0}
 
 #Switch here between qwerty and azerty or make new one
 #Move window to selected desktop FOR QWERTY KEYBOARDS
-super + shift + {1-9,0}
-    id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}}
-
-#Move window to selected desktop FOR AZERTY KEYBOARDS
-#super + shift + {ampersand,eacute,quotedbl,apostrophe,parenleft,section,egrave,exclam,ccedilla,agrave}
+#super + shift + {1-9,0}
 #    id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}}
 
+#Move window to selected desktop FOR AZERTY KEYBOARDS
+super + shift + {ampersand,eacute,quotedbl,apostrophe,parenleft,section,egrave,exclam,ccedilla,agrave}
+    id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}}
+
 #################################################################
+
+
+## super & mouse scroll
+
+# Focused desktop window gap
+super + button{4,5}
+  bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 2 ))
