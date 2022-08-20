@@ -107,6 +107,7 @@ fi
 alias copy="xclip -selection clipboard"
 
 export TERM=xterm-256color
+export PATH=$PATH:$HOME/.local/bin
 source ~/.oh-my-zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
 source $HOME/.cargo/env
 
