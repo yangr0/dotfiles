@@ -120,6 +120,3 @@ source $HOME/.cargo/env
 # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 # wget https://raw.githubusercontent.com/iinc0gnit0/dotfiles/master/zsh/p10k.zsh -O ~/.p10k.zsh
 # wget https://raw.githubusercontent.com/iinc0gnit0/dotfiles/master/zsh/zshrc -O ~/.zshrc
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
