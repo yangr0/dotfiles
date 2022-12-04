@@ -57,3 +57,5 @@ colorscheme gruvbox
 "sudo pacman -S flake8 | sudo apt install flake8
 "pip3 install --user black
 "export PATH=$PATH:$HOME/.local/bin
+"wget https://raw.githubusercontent.com/iinc0gnit0/dotfiles/master/nvim/init.vim -O ~/.config/nvim/init.vim
+":PlugInstall
