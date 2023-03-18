@@ -74,9 +74,9 @@ super + c
 super + h
     urxvt 'htop task manager' -e htop
 
-#arcolinux-logout
+#archlinux-logout
 super + x
-    arcolinux-logout
+    archlinux-logout
 
 #Rofi theme selector
 super + r
@@ -94,18 +94,18 @@ super + v
 super + m
     pragha
 
-#urxvt
+#alacritty
 super + Return
-    urxvt
+    alacritty
 
 #Xkill
 super + Escape
     xkill
 
 #Keyboard dependent
-#urxvt
+#alacritty
 super + KP_Enter
-	urxvt
+	alacritty
 
 #################################################################
 # SUPER + SHIFT KEYS
@@ -124,6 +124,10 @@ super + shift + Return
 super + shift + d
 	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
 
+#dmenu
+super + d
+    ~/.config/bspwm/launcher/launcher.sh
+
 #reload sxhkd:
 super + shift + s
 	pkill -USR1 -x sxhkd
@@ -141,9 +145,9 @@ super + shift + s
 ctrl + alt + w
      arcolinux-welcome-app
 
-#arcolinux-tweak-tool
+#archlinux-tweak-tool
 ctrl + alt + e
-    arcolinux-tweak-tool
+    archlinux-tweak-tool
 
 #conky-rotate
 ctrl + alt + Next
@@ -173,13 +177,13 @@ ctrl + alt + f
 ctrl + alt + i
      nitrogen
 
-#arcolinux-logout
+#archlinux-logout
 ctrl + alt + k
-     arcolinux-logout
+     archlinux-logout
 
-#arcolinux-logout
+#archlinux-logout
 ctrl + alt + l
-    arcolinux-logout
+    archlinux-logout
 
 #Pamac-manager
 ctrl + alt + p
@@ -201,13 +205,13 @@ ctrl + alt + r
 ctrl + alt + s
    spotify
 
-#urxvt
+#alacritty
 ctrl + alt + Return
-    urxvt
+    alacritty
 
-#urxvt
+#alacritty
 ctrl + alt + t
-    urxvt
+    alacritty
 
 #Vivaldi
 ctrl + alt + v
@@ -219,9 +223,9 @@ ctrl + alt + a
 
 
 #Keyboard dependent
-#urxvt
+#alacritty
 #ctrl + alt + KP_Enter
-#     urxvt
+#     alacritty
 
 
 #################################################################
@@ -338,11 +342,11 @@ F12
 
 #Raises volume
 XF86AudioRaiseVolume
-    amixer set Master 10%+
+    amixer -D pulse set Master 10%+
 
 #Lowers volume
 XF86AudioLowerVolume
-    amixer set Master 10%-
+    amixer -D pulse set Master 10%-
 
 #Mute
 XF86AudioMute
