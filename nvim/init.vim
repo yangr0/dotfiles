@@ -1,7 +1,6 @@
-set number 
+set number
 set hlsearch
 set background=dark
-set guicursor=
 set termguicolors
 set t_Co=256
 set tabstop=4
@@ -10,6 +9,10 @@ set expandtab
 set noswapfile
 set autoindent
 set smartindent
+set cursorline
+set cc=80
+set undofile
+set mouse=a
 
 call plug#begin('~/.local/share/nvim/plugged')
 
@@ -35,6 +38,8 @@ let g:gruvbox_italic = 1
 let g:gruvbox_improved_strings = 1
 let g:gruvbox_improved_warnings = 1
 let g:lightline = {'colorscheme': 'one'}
+
+autocmd VimLeave * set guicursor=a:ver25
 
 filetype plugin indent on
 syntax enable

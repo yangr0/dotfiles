@@ -76,7 +76,7 @@ super + h
 
 #arcolinux-logout
 super + x
-    arcolinux-logout
+    archlinux-logout
 
 #Rofi theme selector
 super + r
