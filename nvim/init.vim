@@ -1,4 +1,4 @@
-set number
+set number relativenumber
 set hlsearch
 set background=dark
 set termguicolors
