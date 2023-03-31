@@ -3,8 +3,8 @@ set hlsearch
 set background=dark
 set termguicolors
 set t_Co=256
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set noswapfile
 set autoindent
@@ -20,6 +20,7 @@ Plug 'dense-analysis/ale'
 Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'morhetz/gruvbox'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 call plug#end()
 
