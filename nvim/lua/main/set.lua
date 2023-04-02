@@ -14,5 +14,5 @@ vim.opt.cursorline = true
 vim.opt.cc = "80"
 vim.opt.showmode = false
 vim.opt.syntax = "enable"
-vim.opt.termguicolors =true
+vim.opt.termguicolors = true
 vim.opt.background = "dark"

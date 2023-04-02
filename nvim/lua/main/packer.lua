@@ -12,7 +12,10 @@ local packer_bootstrap = ensure_packer()
 
 require("packer").startup(function(use)
   use("wbthomason/packer.nvim")
-  use('nvim-treesitter/nvim-treesitter')
+  use({
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate"
+  })
   use("dense-analysis/ale")
   use({
     "ellisonleao/gruvbox.nvim",
