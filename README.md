@@ -3,18 +3,12 @@
 
 (go to this [link](https://github.com/iinc0gnit0/dotfiles/blob/master/screenshot.png) if the image is blurry)
 
-My configuration files for ArcoLinuxB + bspwm + polybar + termite + zsh + neovim
+My configuration files for ArcoLinuxB + bspwm + polybar + alacritty + zsh + neovim
 
-Let me know if you want any other dotfiles
+# WARNING
 
-# download
+These configs were made to suit my system and my system only
 
-zshrc: `wget https://raw.githubusercontent.com/iinc0gnit0/dotfiles/master/zsh/zshrc`
+Copy and pasting the entire config file will most likely be very buggy or not work at all
 
-termite config: `wget https://raw.githubusercontent.com/iinc0gnit0/dotfiles/master/termite/config`
-
-neovim: `wget https://raw.githubusercontent.com/iinc0gnit0/dotfiles/master/nvim/init.vim`
-
-polybar: https://github.com/iinc0gnit0/dotfiles/tree/master/polybar
-
-bspwm: https://github.com/iinc0gnit0/dotfiles/tree/master/bspwm
+Make sure to look through the files and make any necessary tweaks
