@@ -64,7 +64,7 @@ super + e
 
 #Browser
 super + w
-    brave
+    google-chrome-stable
 
 #Conky-toggle
 super + c
