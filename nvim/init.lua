@@ -19,4 +19,5 @@ require("main")
 -- cargo install tree-sitter-cli
 -- export PATH=$PATH:$HOME/.local/bin
 -- git clone --depth=1 https://github.com/iinc0gnit0/dotfiles
+-- mkdir .config
 -- cp -r dotfiles/nvim ~/.config
