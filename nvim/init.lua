@@ -16,9 +16,9 @@ require("main")
 -- pip3 install --user black
 -- pip3 install --user neovim
 -- curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
--- export PATH=$PATH:$HOME/.local/bin
+-- export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin
 -- rustup component add rust-analyzer
 -- cargo install tree-sitter-cli
 -- git clone --depth=1 https://github.com/iinc0gnit0/dotfiles
--- mkdir .config
+-- mkdir ~/.config
 -- cp -r dotfiles/nvim ~/.config
