@@ -4,7 +4,7 @@
 # https://github.com/jaagr/polybar/wiki/User-contributed-modules#per-core-temperatures
 
 # Get information from cores temp thanks to sensors
-rawData=$( sensors | grep -m 1 Tctl | awk 'NF>1{print $NF}' | sed '/+//g')
+rawData=$( sensors | grep -m 1 Tctl | awk 'NF>1{print $NF}' | tr -cd '[:digit:].' | xargs )
 tempCore=($rawData)
 
 # Define constants :
@@ -17,8 +17,8 @@ for iCore in ${!tempCore[*]}
 do
     for iTemp in ${!temperaturesValues[*]}
     do
-        if (( "${tempCore[$iCore]}" < "${temperaturesValues[$iTemp]}"  )); then
-            tmpEcho="%{F${temperaturesColors[$iTemp]}}${tempCore[$iCore]}$degree%{F-}"
+      if (( $(echo '${tempCore[$iCore]} < ${temperaturesValues[$iTemp]}' | bc -l) )); then
+            tmpEcho="%{F${temperaturesColors[$iTemp]}${tempCore[$iCore]}$degree%{F-}"
             finalEcho="$finalEcho $tmpEcho"
             break
         fi
