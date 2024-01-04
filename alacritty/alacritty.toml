@@ -1,0 +1,38 @@
+[colors.bright]
+black = "#79A9FF"
+blue = "#70A9FF"
+cyan = "#9aedfe"
+green = "#5af78e"
+magenta = "#ff92d0"
+red = "#ff6e67"
+white = "#e6e6e6"
+yellow = "#f4f99d"
+
+[colors.normal]
+black = "#000000"
+blue = "#6790EB"
+cyan = "#8be9fd"
+green = "#50fa7b"
+magenta = "#ff79c6"
+red = "#ff5555"
+white = "#bfbfbf"
+yellow = "#f1fa8c"
+
+[colors.primary]
+background = "#171616"
+foreground = "#d5c4a1"
+
+[cursor.style]
+shape = "Beam"
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 11
+
+[font.normal]
+family = "MesloLGS NF"
+
+[shell]
+program = "/bin/zsh"
