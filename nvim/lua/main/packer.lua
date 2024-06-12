@@ -25,7 +25,7 @@ require("packer").startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true}
   })
-  use("lukas-reineke/indent-blankline.nvim")
+  use({"lukas-reineke/indent-blankline.nvim", commit = "8299fe7"})
 
   if packer_bootstrap then
     require("packer").sync()
