@@ -539,7 +539,7 @@ alt + space
 
 #Deepin Screeenshot
 alt + s
-    deepin-screenshot
+    flameshot
 
 #################################################################
 # ALT + SHIFT KEYS
