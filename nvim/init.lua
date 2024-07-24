@@ -9,12 +9,9 @@ require("main")
 -- black
 
 -- INSTALL
--- sudo pacman -S neovim | sudo apt install neovim
--- sudo pacman -S python | sudo apt install python3
--- sudo pacman -S flake8 | sudo apt install flake8
--- sudo pacman -S python-pip | sudo apt install python3-pip
--- pip3 install --user black
--- pip3 install --user neovim
+-- sudo pacman -S neovim python flake8 python-pip (arch)
+-- sudo apt install neovim python3 flake8 python3-pip (debian)
+-- pip3 install --user black neovim
 -- curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 -- export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin
 -- rustup component add rust-analyzer
