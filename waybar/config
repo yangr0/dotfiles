@@ -1,0 +1,91 @@
+{
+  "position": "top",
+    "margin-bottom" : 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "height" : 30,
+    "modules-left": [
+      "hyprland/workspaces",
+    ],
+    "modules-center": [
+      "hyprland/window"
+    ],
+    "modules-right": [
+    "battery",
+    "pulseaudio",
+    "network",
+    "temperature",
+    "clock",
+    ],
+    "hyprland/window": {
+      "format": "{}",
+      "max-length": 35,
+      "rewrite": {
+        "": "Hyprland"
+      },
+      "separate-outputs": true,
+    },
+    "hyprland/workspaces": {
+      "format": "{icon}",
+      "on-click": "activate",
+      "format-icons": {
+        "active": " ",
+      },
+      "sort-by-number": true,
+      "persistent-workspaces": {
+        "*": 5, // 5 workspaces by default on every monitor
+      },
+    },
+    "clock": {
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+      "format": "  {usage}%",
+      "tooltip": false
+    },
+    "memory": {
+      "format": "{}%  "
+    },
+    "temperature": {
+      "critical-threshold": 80,
+      "format": "{icon} {temperatureC}°C",
+      "format-icons": ["", "", ""]
+    },
+    "battery": {
+      "states": {
+        "warning": 30,
+        "critical": 15
+      },
+      "format": "{icon}  {capacity}%",
+      "format-full": "{icon}  {capacity}%",
+      "format-charging": "  {capacity}%",
+      "format-plugged": "  {capacity}%",
+      "format-alt": "{time} {icon}",
+      "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+      "format-wifi": "  {signalStrength}%",
+      "format-ethernet": "{cidr} ",
+      "tooltip-format": "{ifname} via {gwaddr} ",
+      "format-linked": "{ifname} (No IP) ",
+      "format-disconnected": " ⚠ ",
+      "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+      "format": "{icon}  {volume}%",
+      "format-bluetooth": "{volume}% {icon} {format_source}",
+      "format-bluetooth-muted": " {icon} {format_source}",
+      "format-muted": " {format_source}",
+      "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", "", ""]
+      },
+      "on-click": "pavucontrol"
+    },
+}
