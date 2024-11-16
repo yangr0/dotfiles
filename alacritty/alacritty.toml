@@ -34,5 +34,7 @@ size = 11
 [font.normal]
 family = "MesloLGS NF"
 
-[shell]
+[terminal]
+
+[terminal.shell]
 program = "/bin/zsh"
