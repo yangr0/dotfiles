@@ -79,6 +79,10 @@ plugins=(zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -124,7 +128,3 @@ source $HOME/.cargo/env
 # wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf -P ~/.local/share/fonts
 # wget https://raw.githubusercontent.com/iinc0gnit0/dotfiles/master/zsh/p10k.zsh -O ~/.p10k.zsh
 # wget https://raw.githubusercontent.com/iinc0gnit0/dotfiles/master/zsh/zshrc -O ~/.zshrc
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

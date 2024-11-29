@@ -27,6 +27,8 @@ require("packer").startup(function(use)
   })
   use({"lukas-reineke/indent-blankline.nvim", commit = "8299fe7"})
 
+  use({"github/copilot.vim"})
+
   if packer_bootstrap then
     require("packer").sync()
   end

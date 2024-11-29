@@ -9,9 +9,11 @@ vim.g.rustfmt_autosave = 1
 vim.g.ale_fix_on_save = 1
 vim.g.ale_linters = {
   ["rust"] = {"cargo", "analyzer"},
-  ["python"] = {"flake8"}
+  ["python"] = {"flake8"},
+  ["typescriptreact"] = {"eslint"}
 }
 vim.g.ale_fixers = {
   ["rust"] = {"rustfmt", "remove_trailing_lines", "trim_whitespace"},
-  ["python"] = {"black"}
+  ["python"] = {"black"},
+  ["typescriptreact"] = {"remove_trailing_lines", "trim_whitespace"}
 }
