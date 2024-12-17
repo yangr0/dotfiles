@@ -1,6 +1,6 @@
 {
   "position": "top",
-    "margin-bottom" : 5,
+    "margin-bottom" : 0,
     "margin-left": 10,
     "margin-right": 10,
     "height" : 30,
@@ -50,6 +50,7 @@
     "temperature": {
       "critical-threshold": 80,
       "format": "{icon} {temperatureC}°C",
+      "hwmon-path": ["/sys/class/hwmon/hwmon6/temp1_input", "/sys/class/hwmon/hwmon7/temp1_input"],
       "format-icons": ["", "", ""]
     },
     "battery": {
