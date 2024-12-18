@@ -31,6 +31,14 @@ button:hover {
   background-color: @surface2;
 }
 
+#temperature:hover {
+  background-color: @surface2;
+}
+
+#network:hover {
+  background-color: @surface2;
+}
+
 #workspaces button {
   padding: 0 5px;
   background-color: transparent;
