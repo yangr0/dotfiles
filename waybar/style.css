@@ -7,7 +7,7 @@
 
 window#waybar {
   background-color: @base;
-  border-radius: 13px;
+  border-radius: 999999px;
   transition-property: background-color;
   transition-duration: 0.5s;
 }
