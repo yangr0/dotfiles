@@ -27,6 +27,7 @@ button:hover {
 }
 
 /* you can set a style on hover for any module like this */
+/*
 #pulseaudio:hover {
   background-color: @surface2;
 }
@@ -38,6 +39,7 @@ button:hover {
 #network:hover {
   background-color: @surface2;
 }
+*/
 
 #workspaces button {
   padding: 0 5px;
