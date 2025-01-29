@@ -11,15 +11,18 @@
       "hyprland/window"
     ],
     "modules-right": [
+    "tray",
     "battery",
     "pulseaudio",
     "network",
     "temperature",
+    "cpu",
+    "memory",
     "clock",
     ],
     "hyprland/window": {
-      "format": "{}",
-      "max-length": 35,
+      "format": "{title}",
+      "max-length": 50,
       "rewrite": {
         "": "Hyprland"
       },
@@ -33,19 +36,41 @@
       },
       "sort-by-number": true,
       "persistent-workspaces": {
-        "*": 5, // 5 workspaces by default on every monitor
+        "*": 9, // 5 workspaces by default on every monitor
       },
     },
     "clock": {
-      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-      "format-alt": "{:%Y-%m-%d}"
+      "format": " {:%H:%M} ",
+      "format-alt": " {:%A, %B %d, %Y (%R)} ",
+      "tooltip-format": "<tt><small>{calendar}</small></tt>",
+      "smooth-scrolling-threshold": 1,
+      "calendar": {
+        "mode"          : "month",
+        "on-scroll"     : 1,
+        "on-click-right": "mode",
+        "format": {
+          "months":     "<span color='#ffead3'><b>{}</b></span>",
+          "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+          "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+          "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+          "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+        }
+      },
+      "actions": {
+        "on-click-right": "mode",
+        "on-click-forward": "tz_up",
+        "on-click-backward": "tz_down",
+        "on-scroll-up": "shift_up",
+        "on-scroll-down": "shift_down"
+      }
     },
     "cpu": {
-      "format": "  {usage}%",
-      "tooltip": false
+      "interval": 1,
+      "format": " {usage:>2}%",
     },
     "memory": {
-      "format": "{}%  "
+      "format": "   {}%   ",
+      "tooltip-format": "{used}GiB / {total}GiB Used"
     },
     "temperature": {
       "critical-threshold": 80,
@@ -56,28 +81,29 @@
     "battery": {
       "states": {
         "warning": 30,
-        "critical": 15
+        "critical": 10
       },
-      "format": "{icon}  {capacity}%",
-      "format-full": "{icon}  {capacity}%",
-      "format-charging": "  {capacity}%",
-      "format-plugged": "  {capacity}%",
-      "format-alt": "{time} {icon}",
-      "format-icons": ["", "", "", "", ""]
+      "format": "  {icon} {capacity}%",
+      "format-full": "  {icon} {capacity}%",
+      "format-charging": "   {capacity}%",
+      "format-plugged": "   {capacity}%",
+      "format-alt": "  {time} {icon}",
+      "format-icons": ["", "", "", "", ""],
+      "tooltip-format": "Usage: {power}W"
     },
     "network": {
-      "format-wifi": "  {signalStrength}%",
+      "format-wifi": " {signalStrength}%",
       "format-ethernet": "{cidr} ",
-      "tooltip-format": "{ifname} via {gwaddr} ",
+      "tooltip-format": "{ifname} via {gwaddr} \nUpload: {bandwidthUpBits}\nDownload: {bandwidthDownBits}",
       "format-linked": "{ifname} (No IP) ",
       "format-disconnected": " ⚠ ",
       "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-      "format": "{icon}  {volume}%",
-      "format-bluetooth": "{volume}% {icon} {format_source}",
-      "format-bluetooth-muted": " {icon} {format_source}",
-      "format-muted": " {format_source}",
+      "format": " {icon}  {volume}%",
+      "format-bluetooth": " {volume}% {icon} {format_source}",
+      "format-bluetooth-muted": "  {icon} {format_source}",
+      "format-muted": "  {format_source}",
       "format-icons": {
         "headphone": "",
         "hands-free": "",
@@ -89,4 +115,9 @@
       },
       "on-click": "pavucontrol"
     },
+    "tray": {
+      "icon-size": 21,
+      "spacing": 25,
+      "show-passive-items": true
+    }
 }

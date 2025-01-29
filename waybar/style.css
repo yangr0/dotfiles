@@ -65,8 +65,12 @@ button:hover {
 
 #clock,
 #battery,
-#cpu,
-#memory,
+#cpu {
+  color: @red;
+}
+#memory {
+  color: @yellow;
+}
 #temperature,
 #network,
 #pulseaudio {
