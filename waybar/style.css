@@ -1,12 +1,10 @@
-@import "macchiato.css";
-
 * {
   font-family: "Fira Code", Roboto, Helvetica, Arial, sans-serif;
   font-size: 18px;
 }
 
 window#waybar {
-  background-color: @base;
+  background-color: white;
   border-radius: 999999px;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -23,7 +21,7 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
   background: inherit;
-  box-shadow: inset 0 -3px #ffffff;
+  box-shadow: inset 0 -3px white;
 }
 
 /* you can set a style on hover for any module like this */
@@ -44,6 +42,7 @@ button:hover {
 #workspaces button {
   padding: 0 5px;
   background-color: transparent;
+  font-weight: 500;
   color: black;
 }
 
@@ -53,7 +52,7 @@ button:hover {
 
 #workspaces button.focused {
   background-color: black;
-  box-shadow: inset 0 -3px #ffffff;
+  box-shadow: inset 0 -3px white;
 }
 
 #workspaces button.urgent {
@@ -62,7 +61,7 @@ button:hover {
 
 #mode {
   background-color: #64727d;
-  box-shadow: inset 0 -3px #ffffff;
+  box-shadow: inset 0 -3px white;
 }
 
 #clock,
@@ -106,7 +105,7 @@ button:hover {
 .modules-right,
 .modules-left,
 .modules-center {
-  background-color: @base;
+  background-color: white;
   border-radius: 15px;
 }
 .modules-right {
@@ -127,14 +126,14 @@ button:hover {
 
 @keyframes blink {
   to {
-    color: #000000;
+    color: black;
   }
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
   background-color: #f53c3c;
-  color: #ffffff;
+  color: white;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: steps(12);
@@ -143,7 +142,7 @@ button:hover {
 }
 
 label:focus {
-  background-color: #000000;
+  background-color: black;
 }
 
 #pulseaudio.muted {
@@ -151,7 +150,7 @@ label:focus {
 }
 
 #cava {
-  margin-right: 20px;
+  margin: 0 20px;
   color: black;
 }
 

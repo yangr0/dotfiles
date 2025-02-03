@@ -52,7 +52,7 @@ def get_current_song():
         if artist_result.returncode != 0 or not artist_title:
             return None  # Return None if no song is playing or an error occurred
 
-        return song_title + " — " + artist_title
+        return song_title + " • " + artist_title
     except Exception as e:
         return None
 
@@ -103,7 +103,7 @@ if __name__ == "__main__":
 
             # Combine glyph and song text with a fixed space
             output["text"] = (
-                f"<span font_family='{GLYPH_FONT_FAMILY}'>♫ {glyph} </span>{song_text} <span font_family='{GLYPH_FONT_FAMILY}'>♫</span>"
+                f"<span font_family='{GLYPH_FONT_FAMILY}'>{glyph} </span>{song_text}<span font_family='{GLYPH_FONT_FAMILY}'> ♫</span>"
             )
 
         except Exception as e:
