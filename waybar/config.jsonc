@@ -46,8 +46,8 @@
       }
     },
     "clock": {
-      "format-alt": "||  {:%H:%M} ",
-      "format": "||  {:%A, %B %d, %Y || %R} ",
+      "format-alt": "  {:%H:%M} ",
+      "format": "  {:%A, %B %d, %Y  %R} ",
       "tooltip-format": "<tt><small>{calendar}</small></tt>",
       "smooth-scrolling-threshold": 1,
       "calendar": {
@@ -72,7 +72,7 @@
     },
     "cpu": {
       "interval": 1,
-      "format": "{usage:>2}% ||"
+      "format": "{usage:>2}% "
     },
     "memory": {
       "format": "  {}% ",
@@ -80,7 +80,7 @@
     },
     "temperature": {
       "critical-threshold": 80,
-      "format": "{icon} {temperatureC}°C ||",
+      "format": "{icon} {temperatureC}°C ",
       "hwmon-path": ["/sys/class/hwmon/hwmon6/temp1_input", "/sys/class/hwmon/hwmon7/temp1_input"],
       "format-icons": ["", "", ""]
     },
@@ -89,27 +89,27 @@
         "warning": 30,
         "critical": 10
       },
-      "format": "|| {icon} {capacity}% ||",
-      "format-full": "|| {icon} {capacity}% ||",
-      "format-charging": "||  {capacity}% ||",
-      "format-plugged": "||  {capacity}% ||",
-      "format-alt": "|| {time} {icon} ||",
+      "format": " {icon} {capacity}% ",
+      "format-full": " {icon} {capacity}% ",
+      "format-charging": "  {capacity}% ",
+      "format-plugged": "  {capacity}% ",
+      "format-alt": " {time} {icon} ",
       "format-icons": ["", "", "", "", ""],
       "tooltip-format": "Usage: {power}W"
     },
     "network": {
-      "format-wifi": " {essid} ({signalStrength}%) ||",
-      "format-ethernet": "{essid} {cidr}  ||",
+      "format-wifi": " {essid} ({signalStrength}%) ",
+      "format-ethernet": "{essid} {cidr}  ",
       "tooltip-format": "{ifname} via {gwaddr} \nUpload: {bandwidthUpBits}\nDownload: {bandwidthDownBits}",
-      "format-linked": "{ifname} (No IP)  ||",
-      "format-disconnected": " Not connected ||",
+      "format-linked": "{ifname} (No IP)  ",
+      "format-disconnected": " Not connected ",
       "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-      "format": " {icon} {volume}% ||",
-      "format-bluetooth": " {volume}% {icon} {format_source} ||",
-      "format-bluetooth-muted": "  {icon} {format_source} ||",
-      "format-muted": "  {format_source} ||",
+      "format": " {icon} {volume}% ",
+      "format-bluetooth": " {volume}% {icon} {format_source} ",
+      "format-bluetooth-muted": "  {icon} {format_source} ",
+      "format-muted": "  {format_source} ",
       "format-icons": {
         "headphone": "",
         "hands-free": "",
