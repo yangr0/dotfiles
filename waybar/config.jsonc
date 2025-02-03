@@ -47,7 +47,7 @@
     },
     "clock": {
       "format-alt": "  {:%H:%M} ",
-      "format": "  {:%A, %B %d, %Y  %R} ",
+      "format": "  {:%A, %B %d, %Y | %R} ",
       "tooltip-format": "<tt><small>{calendar}</small></tt>",
       "smooth-scrolling-threshold": 1,
       "calendar": {
@@ -98,7 +98,7 @@
       "tooltip-format": "Usage: {power}W"
     },
     "network": {
-      "format-wifi": " {essid} ({signalStrength}%) ",
+      "format-wifi": "  {essid} ({signalStrength}%) ",
       "format-ethernet": "{essid} {cidr}  ",
       "tooltip-format": "{ifname} via {gwaddr} \nUpload: {bandwidthUpBits}\nDownload: {bandwidthDownBits}",
       "format-linked": "{ifname} (No IP)  ",
