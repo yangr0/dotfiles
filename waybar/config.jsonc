@@ -6,20 +6,22 @@
     "margin-right": 10,
     "height" : 34,
     "modules-left": [
-      "hyprland/workspaces",
+      "hyprland/workspaces"
     ],
     "modules-center": [
-      "hyprland/window"
+      "image",
+      "custom/mpris"
     ],
     "modules-right": [
-    "tray",
-    "battery",
-    "pulseaudio",
-    "network",
-    "temperature",
-    "cpu",
-    "memory",
-    "clock",
+      "cava",
+      "tray",
+      "battery",
+      "pulseaudio",
+      "network",
+      "temperature",
+      "cpu",
+      "memory",
+      "clock"
     ],
     "hyprland/window": {
       "format": "{title}",
@@ -27,22 +29,22 @@
       "rewrite": {
         "": "Hyprland"
       },
-      "separate-outputs": true,
+      "separate-outputs": true
     },
     "hyprland/workspaces": {
       "format": "{icon}",
       "on-click": "activate",
       "format-icons": {
-        "active": " ",
+        "active": ""
       },
       "sort-by-number": true,
       "persistent-workspaces": {
-        "*": 9, // 5 workspaces by default on every monitor
-      },
+        "*": 9 // 5 workspaces by default on every monitor
+      }
     },
     "clock": {
-      "format": " {:%H:%M} ",
-      "format-alt": " {:%A, %B %d, %Y (%R)} ",
+      "format-alt": " {:%H:%M} ",
+      "format": " {:%A, %B %d, %Y %R} ",
       "tooltip-format": "<tt><small>{calendar}</small></tt>",
       "smooth-scrolling-threshold": 1,
       "calendar": {
@@ -67,10 +69,10 @@
     },
     "cpu": {
       "interval": 1,
-      "format": " {usage:>2}%",
+      "format": "{usage:>2}%",
     },
     "memory": {
-      "format": "   {}%   ",
+      "format": "  {}% ",
       "tooltip-format": "{used}GiB / {total}GiB Used"
     },
     "temperature": {
@@ -84,7 +86,7 @@
         "warning": 30,
         "critical": 10
       },
-      "format": "  {icon} {capacity}%",
+      "format": " {icon} {capacity}%",
       "format-full": "  {icon} {capacity}%",
       "format-charging": "   {capacity}%",
       "format-plugged": "   {capacity}%",
@@ -101,7 +103,7 @@
       "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-      "format": " {icon}  {volume}%",
+      "format": " {icon} {volume}%",
       "format-bluetooth": " {volume}% {icon} {format_source}",
       "format-bluetooth-muted": "  {icon} {format_source}",
       "format-muted": "  {format_source}",
@@ -120,5 +122,68 @@
       "icon-size": 21,
       "spacing": 25,
       "show-passive-items": true
+    },
+    "cava": {
+//        "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+      "framerate": 60,
+      "autosens": 1,
+      //"sensitivity": 100,
+      "bars": 15,
+      "lower_cutoff_freq": 50,
+      "higher_cutoff_freq": 10000,
+      "method": "pipewire",
+      "source": "auto",
+      "stereo": true,
+      "reverse": false,
+      "bar_delimiter": 0,
+      "monstercat": false,
+      "waves": false,
+      "noise_reduction": 0.77,
+      "input_delay": 2,
+      "hide_on_silence": true,
+      "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+      "actions": {
+        "on-click-right": "mode"
+      }
+    },
+    /*
+    "custom/spotify": {
+      "exec": "/usr/bin/python3 ~/.config/hypr/UserScripts/mediaplayer.py 2> /dev/null",
+      "format": "{}  ",
+      "return-type": "json",
+      "on-click": "playerctl play-pause",
+      "on-scroll-up": "playerctl next",
+      "on-scroll-down": "playerctl previous",
+      "max-length": 40,
+      "escape": true
     }
+    "image": {
+      "path": "/tmp/waybar-mediaplayer-art",
+      "size": 32,
+      "signal": 4,
+      "on-click": "feh --auto-zoom --borderless --title 'feh-float' /tmp/waybar-mediaplayer-art"
+    },
+    "custom/mediaplayer": {
+        "exec": "$HOME/.config/waybar/waybar-mediaplayer/src/mediaplayer monitor",
+        "return-type": "json",
+        "format": "{}",
+        "on-click": "$HOME/.config/waybar/waybar-mediaplayer/src/mediaplayer play-pause",
+        "on-scroll-up": "$HOME/.config/waybar/waybar-mediaplayer/src/mediaplayer next",
+        "on-scroll-down": "$HOME/.config/waybar/waybar-mediaplayer/src/mediaplayer previous",
+        "min-length": 20,
+        "max-length": 20
+    }
+    */
+    "image": {
+      "path": "/tmp/mpris-art",
+      "size": 32,
+      "signal": 4,
+      "on-click": "feh --auto-zoom --borderless --title 'feh-float' /tmp/waybar-mediaplayer-art"
+    },
+    "custom/mpris": {
+      "exec": "/usr/bin/python3 -u ~/.local/bin/scrolling-mpris.py",
+      "format": "{}",
+      "return-type": "json",
+      "on-click": "playerctl play-pause"
+    },
 }

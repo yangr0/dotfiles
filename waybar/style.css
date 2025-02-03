@@ -1,7 +1,7 @@
 @import "macchiato.css";
 
 * {
-  font-family: "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Fira Code", Roboto, Helvetica, Arial, sans-serif;
   font-size: 18px;
 }
 
@@ -44,7 +44,7 @@ button:hover {
 #workspaces button {
   padding: 0 5px;
   background-color: transparent;
-  color: #ffffff;
+  color: black;
 }
 
 #workspaces button:hover {
@@ -52,7 +52,7 @@ button:hover {
 }
 
 #workspaces button.focused {
-  background-color: @lavender;
+  background-color: black;
   box-shadow: inset 0 -3px #ffffff;
 }
 
@@ -68,10 +68,10 @@ button:hover {
 #clock,
 #battery,
 #cpu {
-  color: @red;
+  color: black;
 }
 #memory {
-  color: @yellow;
+  color: black;
 }
 #temperature,
 #network,
@@ -80,27 +80,27 @@ button:hover {
 }
 
 #pulseaudio {
-  color: @maroon;
+  color: black;
 }
 
 #network {
-  color: @yellow;
+  color: black;
 }
 
 #temperature {
-  color: @sky;
+  color: black;
 }
 
 #battery {
-  color: @green;
+  color: black;
 }
 
 #clock {
-  color: @flamingo;
+  color: black;
 }
 
 #window {
-  color: @text;
+  color: black;
 }
 
 .modules-right,
@@ -122,7 +122,7 @@ button:hover {
 }
 #battery.charging,
 #battery.plugged {
-  color: @sapphire;
+  color: black;
 }
 
 @keyframes blink {
@@ -147,5 +147,22 @@ label:focus {
 }
 
 #pulseaudio.muted {
-  color: @text;
+  color: black;
 }
+
+#cava {
+  padding: 0 25px;
+  color: black;
+}
+
+#custom-mediaplayer
+{
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+}
+
+#custom-mpris {
+  color: black;
+}
+@import "./waybar-mediaplayer/src/style.css";
