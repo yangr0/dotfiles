@@ -6,12 +6,12 @@ import sys
 # Customization settings (easy to modify)
 GLYPH_FONT_FAMILY = "Fira Code"  # Set to your desired symbols font
 # Those are glyphs that will be always visible at left side of module.
-GLYPHS = {"paused": "", "playing": "", "stopped": ""}
+GLYPHS = {"paused": "", "playing": "", "stopped": ""}
 DEFAULT_GLYPH = ""  # Glyph when status is unknown or default
 TEXT_WHEN_STOPPED = (
     "Nothing playing right now"  # Text to display when nothing is playing
 )
-SCROLL_TEXT_LENGTH = 20  # Length of the song title part (excludes glyph and space)
+SCROLL_TEXT_LENGTH = 25  # Length of the song title part (excludes glyph and space)
 REFRESH_INTERVAL = 0.5  # How often the script updates (in seconds)
 PLAYERCTL_PATH = (
     "/usr/bin/playerctl"  # Path to playerctl, use which playerctl to find yours.
@@ -52,7 +52,7 @@ def get_current_song():
         if artist_result.returncode != 0 or not artist_title:
             return None  # Return None if no song is playing or an error occurred
 
-        return song_title + " — " + artist_title + " | "
+        return song_title + " — " + artist_title
     except Exception as e:
         return None
 
@@ -103,7 +103,7 @@ if __name__ == "__main__":
 
             # Combine glyph and song text with a fixed space
             output["text"] = (
-                f"<span font_family='{GLYPH_FONT_FAMILY}'>{glyph} </span>{song_text}"
+                f"<span font_family='{GLYPH_FONT_FAMILY}'>♫ {glyph} </span>{song_text} <span font_family='{GLYPH_FONT_FAMILY}'>♫</span>"
             )
 
         except Exception as e:

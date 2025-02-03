@@ -151,18 +151,11 @@ label:focus {
 }
 
 #cava {
-  padding: 0 25px;
-  color: black;
-}
-
-#custom-mediaplayer
-{
-  font-size: 16px;
-  font-weight: 600;
+  margin-right: 20px;
   color: black;
 }
 
 #custom-mpris {
   color: black;
+  margin-right: 20px;
 }
-@import "./waybar-mediaplayer/src/style.css";
