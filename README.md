@@ -5,7 +5,7 @@
 ![screenshot](https://github.com/iinc0gnit0/dotfiles/blob/master/screenshot.png)
 
 
-updated waybar cuz im lazy:
+updated (maybe) waybar cuz im lazy:
 
 ![waybar](https://github.com/iinc0gnit0/dotfiles/blob/master/waybar.png)
 
