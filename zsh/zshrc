@@ -106,7 +106,7 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias copy="xclip -selection clipboard"
 
-export TERM=alacritty
+export TERM=xterm-kitty
 export PATH=$PATH:$HOME/.local/bin
 export ZSH_CUSTOM=$ZSH/custom
 source $HOME/.cargo/env
