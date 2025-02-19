@@ -4,13 +4,6 @@
 
 ![screenshot](https://github.com/iinc0gnit0/dotfiles/blob/master/screenshot.png)
 
-
-updated (maybe) waybar cuz im lazy:
-
-![waybar](https://github.com/iinc0gnit0/dotfiles/blob/master/waybar.png)
-
-(go to this [link](https://github.com/iinc0gnit0/dotfiles/blob/master/screenshot.png) if the image is blurry)
-
 # WARNING
 
 These configs were made to suit my system and my system only

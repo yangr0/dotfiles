@@ -4,8 +4,8 @@
 }
 
 window#waybar {
-  background-color: white;
-  border-radius: 999999px;
+  background-color: black;
+  border-radius: 0px;
   transition-property: background-color;
   transition-duration: 0.5s;
 }
@@ -21,7 +21,7 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
   background: inherit;
-  box-shadow: inset 0 -3px white;
+  box-shadow: inset 0 -3px #f2ecbc;
 }
 
 /* you can set a style on hover for any module like this */
@@ -43,7 +43,7 @@ button:hover {
   padding: 0 5px;
   background-color: transparent;
   font-weight: 500;
-  color: black;
+  color: #f2ecbc;
 }
 
 #workspaces button:hover {
@@ -52,7 +52,7 @@ button:hover {
 
 #workspaces button.focused {
   background-color: black;
-  box-shadow: inset 0 -3px white;
+  box-shadow: inset 0 -3px #f2ecbc;
 }
 
 #workspaces button.urgent {
@@ -61,16 +61,16 @@ button:hover {
 
 #mode {
   background-color: #64727d;
-  box-shadow: inset 0 -3px white;
+  box-shadow: inset 0 -3px #f2ecbc;
 }
 
 #clock,
 #battery,
 #cpu {
-  color: black;
+  color: #f2ecbc;
 }
 #memory {
-  color: black;
+  color: #f2ecbc;
 }
 #temperature,
 #network,
@@ -79,33 +79,33 @@ button:hover {
 }
 
 #pulseaudio {
-  color: black;
+  color: #f2ecbc;
 }
 
 #network {
-  color: black;
+  color: #f2ecbc;
 }
 
 #temperature {
-  color: black;
+  color: #f2ecbc;
 }
 
 #battery {
-  color: black;
+  color: #f2ecbc;
 }
 
 #clock {
-  color: black;
+  color: #f2ecbc;
 }
 
 #window {
-  color: black;
+  color: #f2ecbc;
 }
 
 .modules-right,
 .modules-left,
 .modules-center {
-  background-color: white;
+  background-color: black;
   border-radius: 15px;
 }
 .modules-right {
@@ -121,19 +121,19 @@ button:hover {
 }
 #battery.charging,
 #battery.plugged {
-  color: black;
+  color: #f2ecbc;
 }
 
 @keyframes blink {
   to {
-    color: black;
+    color: #f2ecbc;
   }
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
   background-color: #f53c3c;
-  color: white;
+  color: #f2ecbc;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: steps(12);
@@ -142,19 +142,23 @@ button:hover {
 }
 
 label:focus {
-  background-color: black;
+  background-color: #f2ecbc;
 }
 
 #pulseaudio.muted {
-  color: black;
+  color: #f2ecbc;
 }
 
 #cava {
   margin: 0 20px;
-  color: black;
+  color: #f2ecbc;
 }
 
 #custom-mpris {
-  color: black;
+  color: #f2ecbc;
   margin-right: 20px;
+}
+
+#custom-arch_spacer {
+  color: #f2ecbc;
 }

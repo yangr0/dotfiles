@@ -182,8 +182,5 @@
       "format": "{}",
       "return-type": "json",
       "on-click": "playerctl play-pause"
-    },
-    "custom/spacer": {
-      "format": "          "
     }
 }
