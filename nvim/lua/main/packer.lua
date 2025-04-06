@@ -30,6 +30,11 @@ require("packer").startup(function(use)
   use({"github/copilot.vim"})
 
   use({"wakatime/vim-wakatime"})
+  use {
+  "nvim-telescope/telescope.nvim", tag = '0.1.8',
+  requires = { {'nvim-lua/plenary.nvim'} }
+}
+use 'nvim-tree/nvim-web-devicons'
 
   if packer_bootstrap then
     require("packer").sync()
