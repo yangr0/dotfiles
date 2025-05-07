@@ -17,7 +17,8 @@ vim.g.ale_linters = {
   ["javascriptreact"] = {"eslint"},
   ["typescript"] = {"eslint"},
   ["typescriptreact"] = {"eslint"},
-  ["cpp"] = {"clangd"}
+  ["cpp"] = {"clangd"},
+  ["terraform"] = {"checkov"}
 }
 vim.g.ale_fixers = {
   ["*"] = {"remove_trailing_lines", "trim_whitespace"},
@@ -27,5 +28,6 @@ vim.g.ale_fixers = {
   ["javascriptreact"] = {"eslint"},
   ["typescript"] = {"eslint"},
   ["typescriptreact"] = {"eslint"},
-  ["cpp"] = {"clangtidy", "clang-format"}
+  ["cpp"] = {"clangtidy", "clang-format"},
+  ["terraform"] = {"terraform"}
 }
