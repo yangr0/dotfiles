@@ -150,8 +150,17 @@ label:focus {
 }
 
 #cava {
-  margin: 0 20px;
+  margin-right: 20px;
   color: #f2ebb3;
+}
+
+#tray {
+  margin-right: 20px;
+  color: #f2ebb3;
+}
+
+#privacy {
+  color: #cc241d;
 }
 
 #custom-mpris {
