@@ -16,7 +16,23 @@ require("packer").startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate"
   })
-  use("dense-analysis/ale")
+  
+  -- LSP Support
+  use("neovim/nvim-lspconfig")
+  use("williamboman/mason.nvim")
+  use("williamboman/mason-lspconfig.nvim")
+  
+  -- Autocompletion
+  use("hrsh7th/nvim-cmp")
+  use("hrsh7th/cmp-nvim-lsp")
+  use("hrsh7th/cmp-buffer")
+  use("hrsh7th/cmp-path")
+  use("L3MON4D3/LuaSnip")
+  use("saadparwaiz1/cmp_luasnip")
+  
+  -- Formatting
+  use("stevearc/conform.nvim")
+  
   use({
     "ellisonleao/gruvbox.nvim",
     as = "gruvbox"
