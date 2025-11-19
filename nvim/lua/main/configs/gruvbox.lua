@@ -17,7 +17,7 @@ require("gruvbox").setup({
   contrast = "hard",
   palette_overrides = {},
   overrides = {},
-  dim_inactive = false,
+  dim_inactive = true,
   transparent_mode = false,
 })
 

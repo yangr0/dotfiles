@@ -1,4 +1,4 @@
-vim.opt.relativenumber = true
+vim.opt.number = true
 vim.opt.hlsearch = true
 vim.opt.swapfile = false
 vim.opt.undofile = true
@@ -11,7 +11,6 @@ vim.opt.autoindent = true
 vim.opt.mouse = "a"
 vim.opt.cursorline = true
 
-vim.opt.cc = "80"
 vim.opt.showmode = false
 vim.opt.syntax = "enable"
 vim.opt.termguicolors = true
