@@ -4,6 +4,7 @@ require("gruvbox").setup({
   bold = true,
   italic = {
     strings = true,
+    emphasis = true,
     comments = true,
     operators = false,
     folds = true,
@@ -17,7 +18,7 @@ require("gruvbox").setup({
   contrast = "hard",
   palette_overrides = {},
   overrides = {},
-  dim_inactive = true,
+  dim_inactive = false,
   transparent_mode = false,
 })
 

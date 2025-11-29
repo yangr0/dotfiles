@@ -47,7 +47,12 @@ cmp.setup({
     end, { 'i', 's' }),
   }),
   sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
+    {
+      name = 'nvim_lsp',
+      entry_filter = function(entry, ctx)
+        return require("cmp").lsp.CompletionItemKind.Text ~= entry:get_kind()
+      end
+    },
     { name = 'luasnip' },
   }, {
     { name = 'buffer' },
@@ -80,7 +85,9 @@ end
 
 -- Configure diagnostics
 vim.diagnostic.config({
-  virtual_text = true,
+  virtual_lines = {
+    current_line = true,
+  },
   signs = true,
   update_in_insert = false,
   underline = true,
@@ -89,14 +96,15 @@ vim.diagnostic.config({
     border = 'rounded',
     source = 'always',
   },
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = "✘",
+      [vim.diagnostic.severity.WARN] = "▲",
+      [vim.diagnostic.severity.HINT] = "⚑",
+      [vim.diagnostic.severity.INFO] = "»",
+    },
+  }
 })
-
--- Diagnostic signs
-local signs = { Error = "✘", Warn = "▲", Hint = "⚑", Info = "»" }
-for type, icon in pairs(signs) do
-  local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-end
 
 -- Rust
 vim.lsp.config('rust_analyzer', {
