@@ -33,13 +33,23 @@ require("packer").startup(function(use)
   })
   use({"lukas-reineke/indent-blankline.nvim", commit = "8299fe7"})
 
-  use({"github/copilot.vim"})
+  use {
+    "zbirenbaum/copilot.lua",
+    requires = {
+      "copilotlsp-nvim/copilot-lsp", -- (optional) for NES functionality
+    },
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup({})
+    end,
+  }
 
   use({"wakatime/vim-wakatime"})
   use {
-  "nvim-telescope/telescope.nvim", tag = '0.1.8',
-  requires = { {'nvim-lua/plenary.nvim'} }
-}
+    "nvim-telescope/telescope.nvim", tag = '0.1.8',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
 use 'nvim-tree/nvim-web-devicons'
 
 use {'kaarmu/typst.vim', ft = {'typst'}}
